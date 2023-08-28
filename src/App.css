@@ -1,38 +1,77 @@
-.App {
+body {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+  background-repeat: no-repeat;
+}
+.row {
+  display: flex;
+  direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.wrap {
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .wrap > .row{
+  overflow-x: auto;
+  flex-wrap: nowrap;
+} */
+.header {
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searched_movies{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  padding: 20px;
   display: flex;
-  flex-direction: column;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 4px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.navbar .search-field {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.poster {
+  position: relative;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 3px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poster:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.poster:hover .overlay {
+  opacity: 1;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease;
+  bottom: 0;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }
