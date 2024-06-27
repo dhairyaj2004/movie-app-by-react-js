@@ -6,11 +6,30 @@ body {
   background-repeat: no-repeat;
 }
 .row {
-  display: flex;
-  direction: row;
+  display: grid;
   margin-top: 10px;
   margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 2rem; /* gap-8 */
+    justify-content: space-around; /* justify-center */
+    margin-top: 1.25rem; /* mt-5 */
 }
+  
+  @media (min-width: 640px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .row {
+      grid-template-columns: repeat(4, 1fr); /* lg:grid-cols-3 */
+    }
+  }
+  
+
+
 .wrap {
   align-items: center;
   text-align: center;
