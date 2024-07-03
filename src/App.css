@@ -62,11 +62,34 @@ body {
   position: relative;
   margin-bottom: 4px;
 }
+
+
 .navbar .search-field {
+  display: flex;
+  align-items: center;
+  background-color: #ecf0f1;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   width: 100%;
   padding: 12px 20px;
   box-sizing: border-box;
 }
+
+#search-bar {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  flex-grow: 1;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#search-bar::placeholder {
+  color: #7f8c8d;
+}
+
 
 .poster {
   position: relative;
